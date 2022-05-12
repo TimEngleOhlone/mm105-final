@@ -1,0 +1,362 @@
+:root {
+    --header-footer-bg-color: #8D0D3A;
+    --header-footer-text-color: #DC832C;
+    --navbar-link-color: #949494;
+    --navbar-bg-color: #ebebeb;
+    --main-font: 'Poppins', sans-serif;
+    --body-bg: #fefefe;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: calc(12px + 0.390625vw);
+
+}
+
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--body-bg);
+}
+
+/* :root {
+    --header-footer-bg-color: #8D0D3A;
+    --header-footer-text-color: #DC832C;
+    --navbar-link-color: #949494;
+    --navbar-bg-color: #f8f4f4;
+    --main-font: 'Roboto Slab', serif;
+} */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-link-color);
+}
+
+.brand-title {
+    font-size: 2rem;
+    margin: 0.5rem;
+}
+.brand-title a {
+    text-decoration: none;
+    color: var(--header-footer-bg-color);
+    /* transition: ease-in-out 350ms; */
+    letter-spacing: .125rem;
+}
+
+.brand-title a:hover {
+    color: var(--header-footer-text-color);
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: var(--navbar-link-color);
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #8D0D3A;
+}
+
+
+.active {
+    color: var(--header-footer-bg-color) !important;
+}
+
+.active:hover {
+    color: var(--navbar-bg-color) !important;
+}
+
+.order-now {
+    background-color: var(--header-footer-bg-color);
+    color: var(--navbar-bg-color) !important;
+}
+.order-now a:hover {
+    transition: ease-in-out 250ms;
+}
+.order-now a:hover {
+    color: var(--header-footer-text-color) !important;
+}
+.navbar-links li a:hover {
+    color: var(--navbar-bg-color);
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: var(--header-footer-bg-color);
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+.order-now {
+    background-color: var(--header-footer-bg-color) !important;
+    white-space: no-wrap !important;
+}
+
+.order-now a {
+    color: white !important;
+    font-weight: bolder;
+    white-space: no-wrap !important;
+}
+
+
+/* The hero image */
+.hero-image {
+    background-image: url("../images/david-b-townsend-IQSDSFO9UuI-unsplash.jpg");
+
+    /* Set a specific height */
+    height: 50%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+    /* text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--header-footer-text-color); */
+}
+
+.hero-button {
+    background-color: var(--header-footer-bg-color);
+    color: white;
+    padding: 1rem 1rem;
+    border: solid 2px var(--header-footer-text-color);
+    position:absolute; 
+    margin-left:-50px;
+    left:50%;
+    bottom:10px;
+    font-weight: 800;
+}
+
+.hero-button:hover {
+    cursor: pointer;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-text {
+    text-align: center;
+}
+
+.welcome-text h4 {
+    color: red;
+    font-weight: bold;
+}
+
+.map-responsive {
+    display: flex;
+    justify-content: center;
+
+}
+
+.map-responsive iframe {
+    width: 80%;
+}
+
+aside {
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+    grid-auto-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "order"
+        "contact"
+        "hours";
+        width: 80%;
+        margin: 0 15% 0 15%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-wrapper {}
+
+.contact {
+    text-align: center;
+}
+
+.hours {
+    text-align: center;
+}
+
+.online-order {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    background-color: #ccc;
+    width: 250px;
+}
+
+.service-wrapper {
+    width: 100%;
+    border-bottom: solid white 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.online-order img {
+    width: 200px;
+    height: auto;
+    padding: 5px 0;
+}
+
+.online-order:first-child {
+    padding-top: 10px;
+}
+
+.online-order:last-child {
+    /* padding-bottom: 10px; */
+}
+
+.outdoor-img {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.outdoor-img img {
+    width: 80%;
+}
+
+footer {
+    background-color: var(--header-footer-bg-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: larger;
+}
+
+footer p {
+    padding: 0;
+    margin: 0;
+    color: var(--header-footer-text-color);
+    margin-left: 5%;
+    padding-top: 1.25rem;
+}
+
+.social-icons {
+    width: 30%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.social-icons a i {
+    text-decoration: none;
+    color: var(--header-footer-text-color);
+}
+
+@media (min-width: 992px) {
+    .main-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "text text aside"
+            "map map aside"
+            "map map aside";
+        margin-bottom: 1em;
+        
+    }
+
+    .welcome-text {
+        grid-area: text;
+    }
+
+    .map-responsive {
+        grid-area: map;
+    }
+
+    aside {
+        grid-area: aside;
+    }
+
+
+}
